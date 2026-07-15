@@ -1,0 +1,14 @@
+target/
+*.class
+*.jar
+
+.idea/
+.vscode/
+
+.mvn/
+
+.env
+
+application.properties
+
+*.log

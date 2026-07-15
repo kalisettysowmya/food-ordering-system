@@ -1,10 +1,15 @@
 package com.example.foodordering.entity;
 
+import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "restaurants")
 public class Restaurant {
+
+    @OneToMany(mappedBy = "restaurant",
+            cascade = CascadeType.ALL)
+    private List<MenuItem> menuItems;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
